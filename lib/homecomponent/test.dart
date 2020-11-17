@@ -5,13 +5,15 @@ import 'package:flutter_svg/flutter_svg.dart';
 class IconBtnWithCounter extends StatelessWidget {
   const IconBtnWithCounter({
     Key key,
-    @required this.svgSrc,
+     this.svgSrc,
+
     this.numOfitem = 0,
     @required this.press,
   }) : super(key: key);
 
   final String svgSrc;
   final int numOfitem;
+
   final GestureTapCallback press;
 
   @override
@@ -22,7 +24,7 @@ class IconBtnWithCounter extends StatelessWidget {
       child: Stack(
         overflow: Overflow.visible,
         children: [
-          Container(
+          (svgSrc!=null)?Container(
             padding: EdgeInsets.all(8),
             height: 40,
             width: 45,
@@ -32,7 +34,17 @@ class IconBtnWithCounter extends StatelessWidget {
                 border: Border.all(width: 1.5,color: Colors.white)
             ),
             child: SvgPicture.asset(svgSrc),
-          ),
+          ):Container(
+                      padding: EdgeInsets.all(8),
+                     height: 40,
+                        width: 45,
+                        decoration: BoxDecoration(
+                        color: Color(0xFF0D47A1),
+                     shape: BoxShape.circle,
+                        border: Border.all(width: 1.5,color: Colors.white)
+                     ),
+                      child: Icon(Icons.arrow_back_ios,),
+                      ),
           if (numOfitem != 0)
             Positioned(
               right: 0,

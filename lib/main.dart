@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutterecommerce/homepage.dart';
+import 'package:flutterecommerce/detailpage.dart';
+
+
+
 
 void main() {
   runApp(EcommerceApp());
 }
 
 class EcommerceApp extends StatelessWidget {
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Sparkin',
       theme: ThemeData(
         // This is the theme of your application.
         //
-        // Try running your application with "flutter run". You'll see the
+        // Try running your application with "flutter run". You'll see the(
         // application has a blue toolbar. Then, without quitting the app, try
         // changing the primarySwatch below to Colors.green and then invoke
         // "hot reload" (press "r" in the console where you ran "flutter run",
@@ -28,7 +32,7 @@ class EcommerceApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen() ,
+      home:DetailScreen(),
     );
   }
 }

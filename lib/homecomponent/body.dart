@@ -77,29 +77,35 @@ class Body extends StatelessWidget {
                   ),
                 ),
       Container(
-        // height: 90,
-        margin: EdgeInsets.all(14),
-        padding: EdgeInsets.symmetric(
-            horizontal: 36,
-            vertical: 75,
-        ),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            image: new DecorationImage(
-              image:ExactAssetImage('assets/1568889151top2.jpg') ,
-              fit: BoxFit.fill,
+        child: Column(
+          children: [Container(
+            // height: 90,
+            margin: EdgeInsets.all(14),
+            padding: EdgeInsets.symmetric(
+                horizontal: 36,
+                vertical: 75,
             ),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                image: new DecorationImage(
+                  image:ExactAssetImage('assets/1568889151top2.jpg') ,
+                  fit: BoxFit.fill,
+                ),
+            ),
+
+          ),
+            TitleWithMoreBtn(title: "Featured",press: (){print("pressed");},),
+            FeaturedProduct(),
+
+            BannerScreen(),
+            TitleWithMoreBtn(title: "Recommended",press: (){print("pressed");},),
+            Recomends(),
+            TitleWithMoreBtn(title: "Top Sale",press: (){print("pressed");},),
+            FeaturedProduct(),
+
+          ]
         ),
-
       ),
-                TitleWithMoreBtn(title: "Featured",press: (){print("pressed");},),
-              FeaturedProduct(),
-
-                BannerScreen(),
-                TitleWithMoreBtn(title: "Recommended",press: (){print("pressed");},),
-                Recomends(),
-                TitleWithMoreBtn(title: "Top Sale",press: (){print("pressed");},),
-                FeaturedProduct(),
 
 
               ],
